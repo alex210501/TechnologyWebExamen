@@ -30,7 +30,7 @@ module.exports.registerPiece = function (req, res) {
     let width = req.body.width;
 
     // if the rooms already exists, we update it
-    // Other wise, we create it on the database
+    // Otherwise, we create it on the database
     if (id == -1) {
         database.query("INSERT INTO rooms (name, length, width) VALUES (?, ?, ?)", [name, length, width],
                         (error, result) => {

@@ -33,18 +33,12 @@ body {
     margin: 5px 5px 5px 5px;
 }
 
-input{
-    display: inline-block;
-    text-align: right;
-}
-
 label {
     width: 100px;
     display: inline-block;
-    text-align: left;
 }
 
-div.area {
-    display: inline-block;
-  vertical-align: middle;
+.area-surface {
+    display: inline;
+    vertical-align: middle;
 }

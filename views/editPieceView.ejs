@@ -15,23 +15,23 @@
     <form method="post" action="/appartement/registerPiece/">
         <div id="piece-label">
             <p hidden>
-                <label for='id'></label><input type="text" name="id" id="id" value=<%= pieceId %> ></button>
+                <label for='id'></label><input type="text" name="id" id="id" value=<%= pieceId %>></button>
             </p>
             <p>
-                <label for='name'>Piece:</label><input type="text" name="name" id="name" value=<%= pieceName %>></button>
+                <label for='name'>Piece:</label><input required type="text" name="name" id="name" value=<%= pieceName %>></button>
             </p>
             <p>
-                <label for='length'>Largeur:</label><input type="number" name="length" id="length" value=<%= pieceLength %>></button>
+                <label for='length'>Largeur:</label><input required type="number" name="length" id="length" value=<%= pieceLength %>></button>
             </p>
             <p>
-                <label for='width'>Longueur: </label><input type="number" name="width" id="width" value=<%= pieceWidth %>></button>
+                <label for='width'>Longueur: </label><input required type="number" name="width" id="width" value=<%= pieceWidth %>></button>
             </p>
         </div>
     
         <button type="submit" class="register-button">Enregistrer</button>
     </form>
 
-    <div class="area">
+    <div class="area-surface">
         <button type="button" id="button-area">Calculer la surface</button>
         <p id='text-area'></p>
     </div>
