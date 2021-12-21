@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Appartement</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Liste des pièces de l'appartement</h1>
+
+    <% var totalArea=0; %>
+
+    <form method="get" action='piece/editPiece'>
+        <% pieces.forEach(piece=> { %>
+            <p>
+                <button type="submit" class="piece-display" name="id" value="<%= piece.id %>">Pièce : <%= piece.name %> <%= piece.getSurface() %> m2</button>
+            </p>
+            <% totalArea = totalArea + piece.getSurface(); %>
+        <% }) %>
+    
+        <div id='total-area'>
+            <p>Surface totale : <%= totalArea%></p>
+        </div>
+    
+        <button type="submit" class="register-button">Encoder une autre pièce</button>
+    </form>
+</body>
+</html>

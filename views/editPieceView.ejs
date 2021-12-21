@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Piece</title>
+    <script src='../script/pieceScript.js'></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Encoder les données de la pièce</h1>
+
+    <form method="post" action="/appartement/registerPiece/">
+        <div id="piece-label">
+            <p hidden>
+                <label for='id'></label><input type="text" name="id" id="id" value=<%= pieceId %> ></button>
+            </p>
+            <p>
+                <label for='name'>Piece:</label><input type="text" name="name" id="name" value=<%= pieceName %>></button>
+            </p>
+            <p>
+                <label for='length'>Largeur:</label><input type="number" name="length" id="length" value=<%= pieceLength %>></button>
+            </p>
+            <p>
+                <label for='width'>Longueur: </label><input type="number" name="width" id="width" value=<%= pieceWidth %>></button>
+            </p>
+        </div>
+    
+        <button type="submit" class="register-button">Enregistrer</button>
+    </form>
+
+    <div class="area">
+        <button type="button" id="button-area">Calculer la surface</button>
+        <p id='text-area'></p>
+    </div>
+
+</body>
+
+</html>
